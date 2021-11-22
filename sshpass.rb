@@ -6,6 +6,8 @@ class Sshpass < Formula
   url 'https://github.com/dora38/sshpass.git', :branch => 'main', :using => :git
   homepage 'http://sourceforge.net/projects/sshpass'
   license 'MIT'
+  depends_on 'autoconf' => :build
+  depends_on 'automake' => :build
 
   def install
     system "./bootstrap"
